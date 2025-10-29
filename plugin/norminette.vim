@@ -16,9 +16,9 @@ function! NorminetteCompiler()
 	let l:makeprg_save = &makeprg
 	compiler norminette
 	silent make % | redraw! | cc
-	copen
-	compiler gcc
 	let &makeprg = l:makeprg_save
+	compiler gcc
+	copen
 endfunction
 
 " Close quickfix window when closing file
